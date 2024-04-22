@@ -35,13 +35,13 @@ function validateMovies(input) {
 
 function validateNumber(input) {
     if (input === "") {
-        $("#errorQuantity").text("Quantity is required");
+        $("#errorNumber").text("Quantity is required");
         return false;
     } else if (isNaN(input) || input < 1) {
-        $("#errorQuantity").text("Enter numbers");
+        $("#errorNumber").text("Enter numbers");
         return false;
     } else {
-        $("#errorQuantity").text("");
+        $("#errorNumber").text("");
         return true;
     }
 }
@@ -100,10 +100,10 @@ function validateandsave(){
     const movieOK = validateMovies($("#selectedMovie").val());
     const numberOK = validateNumber($("#number").val());
     const fnameOK = validateFname($("#firstname").val());
-    const snameOK = validateSname($("#lastname").val());
+    const lnameOK = validateSname($("#lastname").val());
     const telOK = validateTel($("#phone").val());
     const emailOK = validateEmail($("#email").val());
-    if (movieOK && numberOK && fnameOK && snameOK && telOK && emailOK) {
+    if (movieOK && numberOK && fnameOK && lnameOK && telOK && emailOK) {
         buyTicket();
     }
 }
@@ -141,8 +141,8 @@ function getTickets() {
 // Function to format tickets and display them
 function formatTickets(tickets) {
     let out = "<table>" +
-        "<tr><th>Movies</th><th>Number of tickets</th>" + "<th>Name</th>" +
-        "<th>Surname</th><th>Phone number</th><th>Email</th></tr>";
+        "<tr><th>Movies</th><th>Number of tickets</th>" + "<th>Firstname</th>" +
+        "<th>Lastname</th><th>Phone number</th><th>Email</th></tr>";
     for (let pers of tickets) {
         out += "<tr>" +
             "<td>" + pers.movie + "</td>" +

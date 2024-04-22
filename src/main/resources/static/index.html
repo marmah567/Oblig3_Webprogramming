@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="oblig3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+
+<h1>Buy Cinema Tickets</h1>
+
+<label for="movies">
+    Choose a movie:
+</label>
+
+<select id="movies">
+    <option value="default">Please choose a movie</option>
+    <option>No One Will Save You</option>
+    <option>Canceled</option>
+    <option>The Boogeyman</option>
+    <option>Wonka</option>
+</select>
+<span id="errorMovie" style="color: red"></span>
+<br><br>
+<label for="number">
+    Number of tickets:
+</label>
+<input type="text" id="number"  size="2" onchange="validateNumber(this.value)"/>
+<span id="errorQuantity" style="color: red"></span>
+
+<br><br>
+
+<table>
+    <tr>
+        <td>
+            <label for="firstname">
+                Firstname:
+            </label>
+        </td>
+        <td>
+            <input type="text" id="firstname" onchange="validateFname(this.value)" />
+            <span id="errorFirstname" style="color: #ff0000"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="lastname">
+                Lastname:
+            </label>
+        <td>
+            <input type="text" id="lastname" onchange="validateSname(this.value)"/>
+            <span id="errorLastname" style="color: red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="phone">
+                Telephone:
+            </label>
+        </td>
+        <td>
+            <input type="text" id="phone" onchange="validateTel(this.value)"/>
+            <span id="errorTlf" style="color: red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="email">
+                Email:
+            </label>
+        </td>
+        <td>
+            <input type="text" id="email" onchange="validateEmail(this.value)"/>
+            <span id="errorEmail" style="color: red"></span>
+        </td>
+    </tr>
+</table>
+<br>
+<button onclick="validateandsave()">Buy Ticket</button>
+<span id="right"></span>
+
+<h2>All tickets</h2>
+<div id="allTickets"></div>
+
+<button onclick="deleteTickets()">Delete all tickets</button>
+
+</body>
+</html>

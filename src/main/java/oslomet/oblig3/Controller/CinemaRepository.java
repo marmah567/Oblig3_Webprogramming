@@ -18,8 +18,8 @@ public class CinemaRepository {
 
     public void saveTicket(Ticket ticket) {
         String sql = "INSERT INTO Ticket (movie, number, firstname, lastname, phone, email) VALUES(?,?,?,?,?,?)";
-        db.update(sql, ticket.getMovie(), ticket.getNumber(), ticket.getFirstName(),
-                ticket.getLastName(),ticket.getPhoneNumber(), ticket.getEmail());
+        db.update(sql, ticket.getMovie(), ticket.getNumber(), ticket.getFirstname(),
+                ticket.getLastname(),ticket.getPhone(), ticket.getEmail());
     }
 
     public List<Ticket> getTicket() {

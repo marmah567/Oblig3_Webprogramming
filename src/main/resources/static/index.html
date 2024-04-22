@@ -11,11 +11,11 @@
 
 <h1>Buy Cinema Tickets</h1>
 
-<label for="movies">
+<label for="selectedMovie">
     Choose a movie:
 </label>
 
-<select id="movies">
+<select id="selectedMovie">
     <option value="default">Please choose a movie</option>
     <option>No One Will Save You</option>
     <option>Canceled</option>
@@ -28,7 +28,7 @@
     Number of tickets:
 </label>
 <input type="text" id="number"  size="2" onchange="validateNumber(this.value)"/>
-<span id="errorQuantity" style="color: red"></span>
+<span id="errorNumber" style="color: red"></span>
 
 <br><br>
 

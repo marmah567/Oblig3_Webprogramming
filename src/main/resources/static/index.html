@@ -5,86 +5,108 @@
     <title>Title</title>
     <script src="oblig3.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h1>Buy Cinema Tickets</h1>
 
-<h1>Buy Cinema Tickets</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="selectedMovie">
+                        Choose a movie:
+                    </label>
 
-<label for="selectedMovie">
-    Choose a movie:
-</label>
+                    <select id="selectedMovie">
+                        <option value="default">Please choose a movie</option>
+                        <option>No One Will Save You</option>
+                        <option>Canceled</option>
+                        <option>The Boogeyman</option>
+                        <option>Wonka</option>
+                    </select>
+                    <span id="errorMovie" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="number">
+                        Number of tickets:
+                    </label>
+                    <input type="text" id="number" size="2" onchange="validateNumber(this.value)"/>
+                    <span id="errorNumber" style="color: red"></span>
+                </div> <!--mmmmmmm-->
+                <table>
+                    <div class="form-group">
 
-<select id="selectedMovie">
-    <option value="default">Please choose a movie</option>
-    <option>No One Will Save You</option>
-    <option>Canceled</option>
-    <option>The Boogeyman</option>
-    <option>Wonka</option>
-</select>
-<span id="errorMovie" style="color: red"></span>
-<br><br>
-<label for="number">
-    Number of tickets:
-</label>
-<input type="text" id="number"  size="2" onchange="validateNumber(this.value)"/>
-<span id="errorNumber" style="color: red"></span>
+                        <tr>
+                            <td>
+                                <label for="firstname">
+                                    Firstname:
+                                </label><br><br>
+                            </td>
+                            <td>
+                                <input type="text" id="firstname" onchange="validateFname(this.value)"/>
+                                <span id="errorFirstname" style="color: #ff0000"></span> <br><br>
+                            </td>
+                        </tr>
+                    </div>
+                    <div class="form-group">
 
-<br><br>
+                        <tr>
+                            <td>
+                                <label for="lastname">
+                                    Lastname:
+                                </label><br><br>
+                            </td>
+                            <td>
+                                <input type="text" id="lastname" onchange="validateSname(this.value)"/>
+                                <span id="errorLastname" style="color: red"></span><br><br>
+                            </td>
+                        </tr>
+                    </div>
+                    <div class="form-group">
 
-<table>
-    <tr>
-        <td>
-            <label for="firstname">
-                Firstname:
-            </label>
-        </td>
-        <td>
-            <input type="text" id="firstname" onchange="validateFname(this.value)" />
-            <span id="errorFirstname" style="color: #ff0000"></span>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <label for="lastname">
-                Lastname:
-            </label>
-        <td>
-            <input type="text" id="lastname" onchange="validateSname(this.value)"/>
-            <span id="errorLastname" style="color: red"></span>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <label for="phone">
-                Telephone:
-            </label>
-        </td>
-        <td>
-            <input type="text" id="phone" onchange="validateTel(this.value)"/>
-            <span id="errorTlf" style="color: red"></span>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <label for="email">
-                Email:
-            </label>
-        </td>
-        <td>
-            <input type="text" id="email" onchange="validateEmail(this.value)"/>
-            <span id="errorEmail" style="color: red"></span>
-        </td>
-    </tr>
-</table>
-<br>
-<button onclick="validateandsave()">Buy Ticket</button>
-<span id="right"></span>
+                        <tr>
+                            <td>
+                                <label for="phone">
+                                    Telephone:
+                                </label><br><br>
+                            </td>
+                            <td>
+                                <input type="text" id="phone" onchange="validateTel(this.value)"/>
+                                <span id="errorTlf" style="color: red"></span><br><br>
+                            </td>
+                        </tr>
+                    </div>
+                    <div class="form-group">
 
-<h2>All tickets</h2>
-<div id="allTickets"></div>
+                        <tr>
+                            <td>
+                                <label for="email">
+                                    Email:
+                                </label><br><br>
+                            </td>
+                            <td>
+                                <input type="text" id="email" onchange="validateEmail(this.value)"/>
+                                <span id="errorEmail" style="color: red"></span><br><br>
+                            </td>
+                        </tr>
+                    </div>
+                </table>
+                <br>
+            </form>
+            <button class="btn btn-primary" onclick="validateandsave()">Buy Ticket</button>
+            <span id="right"></span>
+        </div>
+        <div class="col-md-7">
+            <h2>All tickets</h2>
+            <div id="allTickets"></div>
 
-<button onclick="deleteTickets()">Delete all tickets</button>
+            <button class="btn btn-danger" onclick="deleteTickets()">Delete all tickets</button>
+        </div>
 
+    </div>
+</div>
 </body>
 </html>

@@ -48,7 +48,7 @@ function validateNumber(input) {
 
 function validateFname(input) {
     if (input === "") {
-        $("#errorFirstname").text("Name is required");
+        $("#errorFirstname").text("Firstname is required");
         return false;
     } else {
         $("#errorFirstname").text("");
@@ -58,7 +58,7 @@ function validateFname(input) {
 
 function validateSname(input) {
     if (input === "") {
-        $("#errorLastname").text("Surname is required");
+        $("#errorLastname").text("Lastname is required");
         return false;
     } else {
         $("#errorLastname").text("");
@@ -85,7 +85,7 @@ function validateEmail(input) {
     const emailRegex = /^[a-zA-Z0-9._%&+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const ok = emailRegex.test(input);
     if(input === "") {
-        $("#errorEmail").text("Email number is required");
+        $("#errorEmail").text("Email is required");
         return false;
     } else if (!ok) {
         $("#errorEmail").text("Enter a valid email");

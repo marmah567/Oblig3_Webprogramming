@@ -14,4 +14,7 @@
   The tickets is transferred to and stored in a H2-database. 
   The users also have the option to delete all tickets.
 </p>
+<p>
+  Link to Youtube video: https://youtu.be/FS6WZ4g2nh8 
+</p>
 
